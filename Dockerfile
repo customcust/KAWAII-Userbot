@@ -1,11 +1,11 @@
 FROM python:3.9
-RUN git clone -b IXALL-Userbot https://github.com/ixally/IXALL-Userbot /home/IXALLUserbot/ \
-    && chmod 777 /home/IXALLUserbot \
-    && mkdir /home/IXALLUserbot/bin/
+RUN git clone -b KAWAII-Userbot https://github.com/customcust/KAWAII-Userbot /home/KAWAIIUserbot/ \
+    && chmod 777 /home/KAWAIIUserbot \
+    && mkdir /home/KAWAIIUserbot/bin/
 
-COPY ./sample_config.env ./config.env* /home/IXALLUserbot/
+COPY ./sample_config.env ./config.env* /home/KAWAIIUserbot/
 
-WORKDIR /home/IXALLUserbot/
+WORKDIR /home/KAWAIIUserbot/
 
 RUN pip install --upgrade pip
 RUN pip install --upgrade pip setuptools wheel
