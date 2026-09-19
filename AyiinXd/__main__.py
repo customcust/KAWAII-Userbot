@@ -124,13 +124,13 @@ try:
     adB = AyiinDB()
     client = multiayiin()
     git()
-    LOOP.run_until_complete(cek_auto_expired())  # ⛔ auto mati jika expired
-    LOOP.run_until_complete(init_bot_durasi())   # ⏱️ inisialisasi durasi
+    LOOP.run_until_complete(cek_auto_expired())
+    LOOP.run_until_complete(init_bot_durasi())
     LOGS.info(f"Python Version - {python_version()}")
     LOGS.info(f"Telethon Version - {version.__version__} [Layer: {LAYER}]")
     LOGS.info(f"PyTgCalls Version - {pytgcalls}")
     LOGS.info(f"Userbot Version - {ubotversion} •[{adB.name}]•")
-    LOGS.info(f"IXALL Version - {ayiin_version} •[{HOSTED_ON}]•")
+    LOGS.info(f"KAWAII Version - {ayiin_version} •[{HOSTED_ON}]•")
     LOGS.info("[🔥 USERBOT BERHASIL DIAKTIFKAN 🔥]")
 except (ConnectionError, KeyboardInterrupt, NotImplementedError):
     pass
