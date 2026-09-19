@@ -1,4 +1,4 @@
-# repack by blue. #
+# repack by ixall. #
 
 """ Userbot module for System Stats commands """
 
@@ -183,7 +183,7 @@ async def amireallyalive(alive):
     await alive.edit("👨‍❤️‍👨")
     await asyncio.sleep(3)
     output = (
-        f"**here is [𝗜𝗫𝗔𝗟𝗟-Userbot](t.me/jasebixall)**\n\n"
+        f"**here is [𝗞𝗔𝗪𝗔𝗜𝗜-Userbot](t.me/choumist)**\n\n"
         f"**{alive_text}**\n\n"
         f"━━━━━━━━━━━━━━\n"
         f"** - Bᴀsᴇ Oɴ :** ••{adB.name}••\n"
@@ -194,7 +194,7 @@ async def amireallyalive(alive):
         f"** - PʏTɢCᴀʟʟs Vᴇʀsɪᴏɴ :** `{pytgcallss}` \n"
         f"** - Tᴇʟᴇᴛʜᴏɴ Vᴇʀsɪᴏɴ :** `{version.__version__}` \n"
         f"** - Pʏ-ʙʟᴜᴇ ᴠᴇʀsɪᴏɴ :** `{py_ver}`\n"
-        f"** - Ixall ᴠᴇʀsɪᴏɴ :** `{ayiin_version}` [{HOSTED_ON}]\n"
+        f"** - Kawaii ᴠᴇʀsɪᴏɴ :** `{ayiin_version}` [{HOSTED_ON}]\n"
         f"** - Bᴏᴛ Uᴘᴛɪᴍᴇ :** `{uptime}`\n"
         "━━━━━━━━━━━━━━━\n\n"
     )
