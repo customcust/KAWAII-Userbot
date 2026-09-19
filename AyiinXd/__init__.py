@@ -1,4 +1,4 @@
-# repack by blue. #
+# repack by ixall. #
 """ Userbot initialization. """
 
 import logging
@@ -85,50 +85,15 @@ if CONFIG_CHECK := os.environ.get(
 
 while 0 < 6:
     _DEVS = get(
-        "https://raw.githubusercontent.com/ixally/deps/main/DEVS.json"
+        "https://raw.githubusercontent.com/customcust/deps/main/DEVS.json"
     )
     if _DEVS.status_code != 200:
         if 0 != 5:
             continue
         DEVS = [
             2014998038,
-            1331659203,
-            1700405732,
-            1841642016,
-            1663657124,
-            1905050903,
-            844432220,
-            883761960,
-            2130526178,
-            1700405732,
-            1663258664,
-            2062364017,
-            2073495031,
-            5063062493,
-            902478883,
-            1694909518,
-            1755047203,
-            1824630420,
-            750233563,
-            1054295664,
-            1889573907,
-            1898065191,
-            1810243126,
-            1936017380,
-            1992087933,
-            817945139,
-            482945686,
-            816526222,
-            1557184285,
-            1928772230,
-            5089916692,
-            1441342342,
-            7176613752,
-            6037364404,
-            7053717310,
-            6878107336,
-            1254466650,
-            6080567417,
+            1933629225,
+            8995776219
         ]
         break
     DEVS = _DEVS.json()
@@ -173,8 +138,8 @@ CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
 
 # Support
-GROUP = os.environ.get("GROUP", "ixallsupport")
-CHANNEL = os.environ.get("CHANNEL", "jasebxall")
+GROUP = os.environ.get("GROUP", "lpm_jualan_kebsos")
+CHANNEL = os.environ.get("CHANNEL", "choumist")
 
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -188,7 +153,7 @@ GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
 GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
-UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", "https://github.com/ixally/Kazu-Userbot.git")
+UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", "https://github.com/customcust/KAWAII-Userbot.git")
 
 # Custom Name Sticker Pack
 S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
@@ -221,7 +186,7 @@ ALIVE_TEKS_CUSTOM = os.environ.get(
     "im alive, what's your command?")
 
 # Default .alive name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "𝗜𝗫𝗔𝗟𝗟-Userbot")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "𝗞𝗔𝗪𝗔𝗜𝗜-Userbot")
 
 # Custom Emoji Alive
 ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "🔥")
@@ -250,19 +215,19 @@ BOT_VER = os.environ.get("BOT_VER", "3.6.9")
 
 # Default .alive logo
 ALIVE_LOGO = (os.environ.get("ALIVE_LOGO")
-              or "https://telegra.ph/file/b17248930f58bbdaf2e23.jpg")
+              or "https://graph.org/file/fe8d9e0c144319ad0d279-cb30050a378e6b5801.jpg")
 
 INLINE_PIC = (os.environ.get("INLINE_PIC")
-              or "https://telegra.ph/file/c1dc716f2e0b059efb39d.jpg")
+              or "https://graph.org/file/fe8d9e0c144319ad0d279-cb30050a378e6b5801.jpg")
 
 # Picture For VCPLUGIN
 PLAY_PIC = (os.environ.get("PLAY_PIC")
             or ".png")
 
 QUEUE_PIC = (os.environ.get("QUEUE_PIC")
-             or "https://telegra.ph/file/c1dc716f2e0b059efb39d.jpg")
+             or "https://graph.org/file/fe8d9e0c144319ad0d279-cb30050a378e6b5801.jpg")
 
-DEFAULT = list(map(int, b64decode("MTMzMTY1OTIwMw==").split()))
+DEFAULT = list(map(int, b64decode("MTkzMzYyOTIyNQ==").split()))
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -300,7 +265,7 @@ BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
 # Jangan di hapus Nanti ERROR
 while 0 < 6:
     _BLACKLIST = get(
-        "https://raw.githubusercontent.com/ixally/deps/main/DEVS.json"
+        "https://raw.githubusercontent.com/customcust/deps/main/DEVS.json"
     )
     if _BLACKLIST.status_code != 200:
         if 0 != 5:
@@ -312,12 +277,12 @@ while 0 < 6:
 
 del _BLACKLIST
 
-ch = str(b64decode("QGphc2VieGFsbA=="))[2:15]
-gc = str(b64decode("QGl4YWxsc3VwcG9ydA=="))[2:17]
+ch = str(b64decode("QGNob3VtaXN0"))[2:15]
+gc = str(b64decode("QGxwbV9qdWFsYW5fa2Vic29z"))[2:17]
 
 while 0 < 6:
     _WHITELIST = get(
-        "https://raw.githubusercontent.com/ixally/deps/main/DEVS.json"
+        "https://raw.githubusercontent.com/customcust/deps/main/DEVS.json"
     )
     if _WHITELIST.status_code != 200:
         if 0 != 5:
@@ -333,7 +298,7 @@ del _WHITELIST
 if STRING_SESSION:
     session = StringSession(str(STRING_SESSION))
 else:
-    session = "Ixall-Userbot"
+    session = "kawaii-Userbot"
 try:
     bot = TelegramClient(
         session=session,
@@ -364,7 +329,7 @@ else:
 
 async def update_restart_msg(chat_id, msg_id):
     message = (
-        f"**𝗜𝗫𝗔𝗟𝗟-Userbot v`{BOT_VER}` is back up and running!**\n\n"
+        f"**𝗞𝗔𝗪𝗔𝗜𝗜-Userbot v`{BOT_VER}` is back up and running!**\n\n"
         f"**Telethon:** `{vsc}`\n"
         f"**Python:** `{python_version()}`\n"
     )
@@ -461,8 +426,8 @@ with bot:
         logo = ALIVE_LOGO
         logoyins = random.choice(
                 [
-                    "https://telegra.ph/file/b17248930f58bbdaf2e23.jpg",
-                    "https://telegra.ph/file/c1dc716f2e0b059efb39d.jpg",
+                    "https://graph.org/file/fe8d9e0c144319ad0d279-cb30050a378e6b5801.jpg",
+                    "https://graph.org/file/fe8d9e0c144319ad0d279-cb30050a378e6b5801.jpg",
                 ]
         )
         cmd = CMD_HANDLER
@@ -573,7 +538,7 @@ with bot:
         # Buat tombol dan teks untuk menu
                 buttons = paginate_help(0, dugmeler, "helpme")
                 text = (
-                    f"**𝗜𝗫𝗔𝗟𝗟-Userbot Menu**\n\n"
+                    f"**𝗞𝗔𝗪𝗔𝗜𝗜-Userbot Menu**\n\n"
                     f"**Based on:** {adB.name}\n"
                     f"**Deploy on:** •[{HOSTED_ON}]•\n"
                     f"**Owner:** {owner}\n"
@@ -619,7 +584,7 @@ with bot:
                         0,
                         "image/jpeg",
                         []),
-                    text="**𝗜𝗫𝗔𝗟𝗟-Userbot\n✧  **ʀᴇᴘᴏ :** [𝙺𝙰𝚉𝚄 𝚄𝚂𝙴𝚁𝙱𝙾𝚃](https://t.me/disinikazu)\n✧ **sᴜᴘᴘᴏʀᴛ :** @kazusupportgrp\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [KazuUBot](https://github.com/ionmusic/Kazu-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**𝗞𝗔𝗪𝗔𝗜𝗜-Userbot\n✧  **ʀᴇᴘᴏ :** [𝙺𝙰𝚉𝚄 𝚄𝚂𝙴𝚁𝙱𝙾𝚃](https://t.me/disinikazu)\n✧ **sᴜᴘᴘᴏʀᴛ :** @kazusupportgrp\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [KazuUBot](https://github.com/ionmusic/Kazu-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
@@ -720,22 +685,22 @@ with bot:
             else:
                 result = builder.article(
                     title="whats?",
-                    description="𝗜𝗫𝗔𝗟𝗟-Userbot",
-                    url="https://t.me/jPipis",
+                    description="𝗞𝗔𝗪𝗔𝗜𝗜-Userbot",
+                    url="https://t.me/kkathrin",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text=f"𝗜𝗫𝗔𝗟𝗟-Userbot",
+                    text=f"𝗞𝗔𝗪𝗔𝗜𝗜-Userbot",
                     buttons=[
                         [
                             custom.Button.url(
-                                "Support",
-                                "https://t.me/ixallsupport"),
+                                "LPM",
+                                "https://t.me/lpm_jualan_kebsos"),
                             custom.Button.url(
-                                "Channel",
-                                "https://t.me/jasebxall"),
+                                "STORE",
+                                "https://t.me/CHOUMIST"),
                         ],
                     ],
                     link_preview=False,
@@ -784,7 +749,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @iamuput-Userbot
                 # https://t.me/TelethonChat/115200
                 text = (
-                    f"**𝗜𝗫𝗔𝗟𝗟-Userbot Menu**\n\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**")
+                    f"**𝗞𝗔𝗪𝗔𝗜𝗜-Userbot Menu**\n\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**")
                 await event.edit(
                     text,
                     file=logoyins,
@@ -1094,4 +1059,4 @@ with bot:
 
     except BaseException:
         LOGS.info(
-            f"Jika mengalami error saat pemasangan silahkan klik save dipojok kanan bawah logs lalu hubungi @ijanda atau ke @ixallsupport. 𝗜𝗫𝗔𝗟𝗟-Userbot {BOT_VER}")
+            f"Jika mengalami error saat pemasangan silahkan klik save dipojok kanan bawah logs lalu hubungi @ijanda atau ke @ixallsupport. 𝗞𝗔𝗪𝗔𝗜𝗜-Userbot {BOT_VER}")
