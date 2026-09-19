@@ -209,9 +209,9 @@ CMD_HELP.update(
     {
         "update": f"**Plugin : **`update`\
         \n\n  »  **Perintah :** `{cmd}update`\
-        \n  »  **Kegunaan : **Untuk Melihat Pembaruan Terbaru 𝗜𝗫𝗔𝗟𝗟-Userbot.\
+        \n  »  **Kegunaan : **Untuk Melihat Pembaruan Terbaru 𝗞𝗔𝗪𝗔𝗜𝗜-Userbot.\
         \n\n  »  **Perintah :** `{cmd}update deploy`\
-        \n  »  **Kegunaan : **Untuk MengUpdate Fitur Terbaru Dari 𝗜𝗫𝗔𝗟𝗟-Userbot.\
+        \n  »  **Kegunaan : **Untuk MengUpdate Fitur Terbaru Dari 𝗞𝗔𝗪𝗔𝗜𝗜-Userbot.\
     "
     }
 )

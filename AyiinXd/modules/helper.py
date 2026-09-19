@@ -22,13 +22,13 @@ CMD_HELP.update(
     {
         "helper": f"**Plugin : **`helper`\
         \n\n  »  **Perintah :** `{cmd}ihelp`\
-        \n  »  **Kegunaan : **Bantuan Untuk 𝗜𝗫𝗔𝗟𝗟-𝗨𝘀𝗲𝗿𝗯𝗼𝘁.\
+        \n  »  **Kegunaan : **Bantuan Untuk 𝗞𝗔𝗪𝗔𝗜𝗜-𝗨𝘀𝗲𝗿𝗯𝗼𝘁.\
         \n\n  »  **Perintah :** `{cmd}listvar`\
         \n  »  **Kegunaan : **Melihat Daftar Vars.\
         \n\n  »  **Perintah :** `{cmd}repo`\
-        \n  »  **Kegunaan : **Melihat Repository 𝗜𝗫𝗔𝗟𝗟-𝗨𝘀𝗲𝗿𝗯𝗼𝘁.\
+        \n  »  **Kegunaan : **Melihat Repository 𝗞𝗔𝗪𝗔𝗜𝗜-𝗨𝘀𝗲𝗿𝗯𝗼𝘁.\
         \n\n  »  **Perintah :** `{cmd}string`\
-        \n  »  **Kegunaan : **Link untuk mengambil String 𝗜𝗫𝗔𝗟𝗟-𝗨𝘀𝗲𝗿𝗯𝗼𝘁.\
+        \n  »  **Kegunaan : **Link untuk mengambil String 𝗞𝗔𝗪𝗔𝗜𝗜-𝗨𝘀𝗲𝗿𝗯𝗼𝘁.\
     "
     }
 )

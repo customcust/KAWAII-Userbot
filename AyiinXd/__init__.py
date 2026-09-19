@@ -571,7 +571,7 @@ with bot:
                 result = await event.builder.photo(
                     file=logoyins,
                     link_preview=False,
-                    text=f"**𝗜𝗫𝗔𝗟𝗟-Userbot**\n\n Bases on :** {adB.name}\n Deploy on :** •[{HOSTED_ON}]•\n Owner :** {user.first_name}\n Jumlah :** {len(dugmeler)} **Modules**",
+                    text=f"**𝗞𝗔𝗪𝗔𝗜𝗜-Userbot**\n\n Bases on :** {adB.name}\n Deploy on :** •[{HOSTED_ON}]•\n Owner :** {user.first_name}\n Jumlah :** {len(dugmeler)} **Modules**",
                     buttons=main_help_button,
                 )
             elif query.startswith("repo"):

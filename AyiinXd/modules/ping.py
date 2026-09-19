@@ -110,7 +110,7 @@ async def _(pong):
         f" 𖤐 𝗛𝗔𝗩𝗘 𝗬𝗢𝗨𝗥 𝗣𝗜𝗡𝗚 "
         f"\n ★ 𝗬𝗼𝘂𝗿 𝗣𝗶𝗻𝗴 `%sms` \n"
         f"★ 𝗨𝗽𝘁𝗶𝗺𝗲 "
-        f"\n ★ User - 𝗜𝗫𝗔𝗟𝗟『[{user.first_name}](tg://user?id={user.id})』 \n" % (duration)
+        f"\n ★ User - 𝗞𝗔𝗪𝗔𝗜𝗜『[{user.first_name}](tg://user?id={user.id})』 \n" % (duration)
     )
 
 

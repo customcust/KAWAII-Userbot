@@ -60,7 +60,7 @@ async def _(ping):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user = await ping.client.get_me()
-    message = "**♘ 𝗜𝗫𝗔𝗟𝗟-Userbot**\n\n├ 私 **ᴘɪɴɢᴇʀ :** `{} ms`\n├ さ **ᴜᴘᴛɪᴍᴇ :** `{}`\n├ ふ **ᴏᴡɴᴇʀ :** `{}`\n├ 尔 **ɪᴅ :** `{}`"
+    message = "**♘ 𝗞𝗔𝗪𝗔𝗜𝗜-Userbot**\n\n├ 私 **ᴘɪɴɢᴇʀ :** `{} ms`\n├ さ **ᴜᴘᴛɪᴍᴇ :** `{}`\n├ ふ **ᴏᴡɴᴇʀ :** `{}`\n├ 尔 **ɪᴅ :** `{}`"
     await ping.reply(message.format(duration, uptime, user.first_name, user.id)
                      )
 
@@ -92,7 +92,7 @@ async def kazu(ganteng):
 CMD_HELP.update(
     {
         "yinsping": f"**Plugin:** `Kazuping`\
-        \n\n  »  **Perintah : **`Perintah Ini Hanya Untuk Devs 𝗜𝗫𝗔𝗟𝗟-Userbot Tod.`\
+        \n\n  »  **Perintah : **`Perintah Ini Hanya Untuk Devs 𝗞𝗔𝗪𝗔𝗜𝗜-Userbot Tod.`\
         \n  »  **Kegunaan :** __Silahkan Ketik `{cmd}ping` Untuk Publik.__\
     "
     }
