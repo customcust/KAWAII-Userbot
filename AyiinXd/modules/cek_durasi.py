@@ -6,7 +6,7 @@ from AyiinXd import CMD_HANDLER as cmd
 from AyiinXd import CMD_HELP, DB_URI, bot
 from AyiinXd.ayiin import ayiin_cmd
 
-GROUP_ID_TUJUAN = -1002354582522  # ganti dengan grup log kamu
+GROUP_ID_TUJUAN = -1004299551499  # ganti dengan grup log kamu
 
 # Fungsi konversi durasi ke detik
 def konversi_ke_detik(durasi: str) -> int:
