@@ -32,26 +32,22 @@ async def helpyins(event):
     if event.fwd_from:
         return
 
-    try:
-        results = await event.client.inline_query("@kawaiiubot", "")
-
-        if not results:
-            return await eor(
-                event,
-                f"@kawaiiubot tidak memberikan hasil inline.\n"
-                f"Silahkan ketik `{cmd}restart`"
+    if args := event.pattern_match.group(1).lower():
+        if args in CMD_HELP:
+            await eor(event, get_string("help_5").format(CMD_HELP[args], ch))
+        else:
+            await eod(event, get_string("help_10").format(args, cmd))
+    else:
+        try:
+            results = await event.client.inline_query("@dspamubot", "")
+            await results[0].click(
+                event.chat_id,
+                reply_to=event.reply_to_msg_id,
+                hide_via=True,
             )
-
-        await results[0].click(
-            event.chat_id,
-            reply_to=event.reply_to_msg_id,
-            hide_via=True,
-        )
-        await event.delete()
-
-    except Exception:
-        await eor(
-            event,
-            f"Bot tidak menanggapi inline kueri.\n"
-            f"Silahkan ketik `{cmd}restart`"
-        )
+            await event.delete()
+        except timout:
+            await eor(
+                event,
+                f"Bot tidak menanggapi inline kueri.\nSilahkan Ketik `{cmd}restart`"
+            )
