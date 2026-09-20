@@ -657,61 +657,33 @@ async def start_schedule_manager(client):
     LOOP.create_task(monitor_repeat())
 
 
-CMD_HELP.update({
-    "spamjadwal": f"""
-╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-│   **Plugin : spamjadwal**
-│
-│  »  **Perintah :** `{cmd}szone <WIB/WITA/WIT>`
-│  »  **Kegunaan :** Menyetel zona waktu lokal kamu (default: WIB)
-│
-│  »  **Perintah :** `{cmd}sgrup <namalist> <@grup1> [@grup2]`
-│  »  **Kegunaan :** Menambahkan banyak grup ke dalam satu list spam.
-│
-│  »  **Perintah :** `{cmd}dgrup <namalist> <@grup1> [@grup2]`
-│  »  **Kegunaan :** Menghapus grup tertentu dari list.
-│
-│  »  **Perintah :** `{cmd}rlist <namalist>`
-│  »  **Kegunaan :** Menghapus list dan semua grup di dalamnya.
-│
-│  »  **Perintah :** `{cmd}nspam`
-│  »  **Kegunaan :** Menampilkan semua list dan grup yang tersimpan.
-│
-│  »  **Perintah :** `{cmd}dbspam`
-│  »  **Kegunaan :** Menampilkan spam yang sedang berjalan.
-│
-│  »  **Perintah :** `{cmd}unspam <jam_henti> <delay> <namalist> <teks>`
-│  »  **Kegunaan :** Spam teks (atau reply media) ke semua grup di list.
-│
-│  »  **Perintah :** `{cmd}unfw <jam_henti> <delay> <namalist> <link pesan>`
-│  »  **Kegunaan :** Spam forward pesan dari channel ke semua grup di list.
-│
-│  »  **Perintah :** `{cmd}respam <jam_mulai> <jam_henti> <namalist>`
-│  »  **Kegunaan :** Menjadwalkan spam agar otomatis jalan tiap hari.
-│
-│  »  **Perintah :** `{cmd}dnspam <namalist>`
-│  »  **Kegunaan :** Menghentikan semua spam & repeat untuk list tersebut.
-│
-│  •  **NOTE :**
-│     - Gunakan format jam 24 jam (contoh: `06:00`, `22:30`)
-│     - Delay dalam detik (angka)
-│     - Bisa kirim media (gunakan reply)
-│     - Support zona waktu WIB / WITA / WIT
-│     - Auto resume setelah restart
-│     - Auto repeat sesuai jam yang diset
-╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-"""
-})
-# ----------------- END -----------------
-# NOTE:
-# After importing this module you MUST call `await ensure_tables()` once (or call
-# start_schedule_manager(client) after bot is ready) so DB tables exist and schedule manager starts.
-#
-# Example (in __main__.py after client is ready):
-#   LOOP.run_until_complete(spamjadwal.ensure_tables())
-#   LOOP.create_task(spamjadwal.start_schedule_manager(bot))
-#
-# Or if you prefer synchronous call:
-#   LOOP.run_until_complete(spamjadwal.start_schedule_manager(bot))
-#
-# The module provides all commands and will resume or repeat schedules saved in DB.
+CMD_HELP.update(
+    {
+        "spamjadwal": f"**Plugin : **`spamjadwal`\
+        \n\n  »  **Perintah :** `{cmd}szone <WIB/WITA/WIT>`\
+        \n  »  **Kegunaan :** Mengatur zona waktu pengguna agar jadwal spam berjalan sesuai waktu lokal.\
+        \n\n  »  **Perintah :** `{cmd}sgrup <namalist> <@grup1> <@grup2>`\
+        \n  »  **Kegunaan :** Menyimpan beberapa grup ke dalam satu list spam.\
+        \n\n  »  **Perintah :** `{cmd}dgrup <namalist> <@grup>`\
+        \n  »  **Kegunaan :** Menghapus grup tertentu dari list spam.\
+        \n\n  »  **Perintah :** `{cmd}nspam`\
+        \n  »  **Kegunaan :** Menampilkan semua nama list spam beserta grup yang tersimpan.\
+        \n\n  »  **Perintah :** `{cmd}rlist <namalist>`\
+        \n  »  **Kegunaan :** Menghapus list spam beserta seluruh grup yang ada di dalamnya.\
+        \n\n  »  **Perintah :** `{cmd}unspam <jam_stop> <delay> <namalist> <teks>`\
+        \n  »  **Kegunaan :** Mengirim spam teks otomatis ke semua grup dalam list sampai waktu berhenti. Bisa menggunakan reply media.\
+        \n\n  »  **Perintah :** `{cmd}unfw <jam_stop> <delay> <namalist> <link pesan>`\
+        \n  »  **Kegunaan :** Mengirim forward pesan dari channel ke semua grup dalam list sampai waktu berhenti.\
+        \n\n  »  **Perintah :** `{cmd}respam <jam_mulai> <jam_stop> <namalist>`\
+        \n  »  **Kegunaan :** Membuat jadwal spam otomatis berulang setiap hari berdasarkan konfigurasi spam sebelumnya.\
+        \n\n  »  **Perintah :** `{cmd}dnspam <namalist>`\
+        \n  »  **Kegunaan :** Menghentikan spam yang sedang berjalan dan menghapus seluruh jadwal pada list tersebut.\
+        \n\n  •  **NOTE :**\
+        \n    - Format waktu menggunakan format 24 jam (contoh: 08:30, 22:00)\
+        \n    - Delay menggunakan hitungan detik (contoh: 60 = 1 menit)\
+        \n    - Bisa spam media dengan cara reply pesan terlebih dahulu\
+        \n    - Mendukung zona waktu WIB, WITA, dan WIT\
+        \n    - Jadwal tersimpan di database dan otomatis resume setelah restart\
+        \n    - Gunakan dengan bijak, spam berlebihan dapat menyebabkan akun terkena pembatasan Telegram!"
+    }
+)
