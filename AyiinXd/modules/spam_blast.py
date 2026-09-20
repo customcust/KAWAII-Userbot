@@ -310,27 +310,30 @@ CMD_HELP.update(
     {
         "spamloop": f"**Plugin : **`spamloop`\
         \n\n  »  **Perintah :** `{cmd}onspam <delay> <namalist> <teks sebar>`\
-        \n  »  **Kegunaan :** Spam teks ke semua grup di list. Bisa reply media juga.\
-        \n\n  »  **Perintah :** `{cmd}onfw <delay> <namalist> <link bbc dari channel>`\
-        \n  »  **Kegunaan :** Spam forward pesan dari channel ke semua grup di list.\
+        \n  »  **Kegunaan :** Mengirim spam teks otomatis ke semua grup yang ada di dalam list. Bisa mengirim media dengan cara reply pesan terlebih dahulu.\
+        \n\n  »  **Perintah :** `{cmd}onfw <delay> <namalist> <link pesan channel>`\
+        \n  »  **Kegunaan :** Mengirim forward pesan dari channel Telegram ke semua grup yang ada di dalam list secara otomatis.\
         \n\n  »  **Perintah :** `{cmd}stopspam <namalist>`\
-        \n  »  **Kegunaan :** Memberhentikan spam yang sedang berjalan di list tersebut.\
-        \n\n  »  **Perintah :** `{cmd}setgrup <namalist> <@usergrup1> <@usergrup2>`\
-        \n  »  **Kegunaan :** Menyimpan banyak grup ke dalam satu list.\
+        \n  »  **Kegunaan :** Menghentikan spam yang sedang berjalan pada list tertentu dan menonaktifkan auto resume.\
+        \n\n  »  **Perintah :** `{cmd}setgrup <namalist> <@grup1> <@grup2>`\
+        \n  »  **Kegunaan :** Menambahkan beberapa grup ke dalam satu list spam. Mendukung banyak grup sekaligus.\
         \n\n  »  **Perintah :** `{cmd}listspam`\
-        \n  »  **Kegunaan :** Menampilkan semua list spam yang sedang berjalan.\
+        \n  »  **Kegunaan :** Menampilkan semua list spam yang tersimpan beserta jumlah grup, delay, dan status aktif/nonaktif.\
         \n\n  »  **Perintah :** `{cmd}listsave <namalist>`\
-        \n  »  **Kegunaan :** Menampilkan detail isi list (grup & teks sebar).\
+        \n  »  **Kegunaan :** Menampilkan detail list seperti jenis spam, delay, jumlah grup, akun pengirim, dan isi pesan/link yang digunakan.\
         \n\n  »  **Perintah :** `{cmd}slist`\
-        \n  »  **Kegunaan :** Menampilkan semua nama list spam yang tersimpan.\
-        \n\n  »  **Perintah :** `{cmd}delgrup <namalist> <@usergrup>`\
-        \n  »  **Kegunaan :** Menghapus grup tertentu dari nama list.\
+        \n  »  **Kegunaan :** Menampilkan semua nama list spam yang memiliki grup tersimpan.\
+        \n\n  »  **Perintah :** `{cmd}delgrup <namalist> <@grup>`\
+        \n  »  **Kegunaan :** Menghapus grup tertentu dari list spam.\
         \n\n  »  **Perintah :** `{cmd}dellist <namalist>`\
-        \n  »  **Kegunaan :** Menghapus seluruh list beserta grup & teksnya.\
+        \n  »  **Kegunaan :** Menghapus seluruh list spam beserta semua grup yang tersimpan di dalamnya.\
         \n\n  •  **NOTE :**\
-        \n    - Jangan ada spasi di antara `|`\
-        \n    - Delay dalam detik (angka)\
-        \n    - Bisa spam media (reply dulu pesan yang ingin disebar)\
-        \n    - Gunakan dengan bijak, spam berlebihan bisa dibanned telegram!"
+        \n    - Delay menggunakan hitungan detik.\
+        \n    - Bisa mengirim media dengan cara reply pesan media terlebih dahulu sebelum menjalankan `{cmd}onspam`.\
+        \n    - Link forward harus berupa link pesan Telegram (contoh: `https://t.me/channel/123`).\
+        \n    - Grup harus dimasukkan terlebih dahulu menggunakan `{cmd}setgrup`.\
+        \n    - Data list tersimpan di database.\
+        \n    - Sistem mendukung auto resume setelah restart jika status list masih aktif.\
+        \n    - Gunakan dengan bijak, spam berlebihan dapat menyebabkan pembatasan akun Telegram!"
     }
-    )
+)
