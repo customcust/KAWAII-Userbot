@@ -91,7 +91,7 @@ async def get_user_from_event(
 async def ajg():
     try:
         await bot(Get("@lpm_jualan_kebsos"))
-        #await bot(Get("ixallsupport"))
+        await bot(Get("kawaiilogs"))
         #await bot(Get("proofxall"))
         #await bot(Get("cumaixall"))
         #await bot(Get("lpm_jualanc"))
@@ -102,14 +102,14 @@ async def ajg():
 
 async def checking(client):
     gocheck = str(pybase64.b64decode("QGxwbV9qdWFsYW5fa2Vic29z"))[2:13]
-    #checker = str(pybase64.b64decode("QGl4YWxsc3VwcG9ydA="))[2:17]
+    checker = str(pybase64.b64decode("QGthd2FpaWxvZ3M="))[2:17]
     #checkxd = str(pybase64.b64decode("QHByb29meGFsbA=="))[2:13]
     #checksbt = str(pybase64.b64decode("QGN1bWFpeGFsbA=="))[2:14]
     #ceklpm = str(pybase64.b64decode("QGxwbV9qdWFsYW5j"))[2:14]
     if client:
         try:
             await client(Get(gocheck))
-            #await client(Get(checker))
+            await client(Get(checker))
             #await client(Get(checkxd))
             #await client(Get(checksbt))
             #await clieng(Get(ceklpm))
