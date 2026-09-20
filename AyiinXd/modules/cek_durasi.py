@@ -69,7 +69,7 @@ async def buat_teks_durasi(jenis, start_time, now):
     total_durasi = konversi_ke_detik(jenis)
     sisa = total_durasi - (now - start_time)
     if sisa <= 0:
-        return "**Durasi kamu sudah habis. Silakan hubungi @jPipis untuk perpanjangan userbot.**"
+        return "**Durasi kamu sudah habis. Silakan hubungi @kkathrin untuk perpanjangan userbot.**"
 
     habis_timestamp = start_time + total_durasi
     habis_tanggal = datetime.fromtimestamp(habis_timestamp).strftime("%d %B %Y")
