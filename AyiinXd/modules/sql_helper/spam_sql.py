@@ -11,6 +11,9 @@ class SpamList(BASE):
     content = Column(String, default="")
     delay = Column(Integer, default=60)
     is_active = Column(Boolean, default=False)
+    media_chat = Column(String,default="")
+    media_msg = Column(Integer,default=0)
+    media_type = Column(String,default="")
 
 
 class SpamGroup(BASE):
@@ -28,6 +31,27 @@ def commit_db():
         SESSION.rollback()
         raise
 
+def update_media(name,chat_id,msg_id,media_type):
+    data=get_list(name)
+
+    if data:
+        data.media_chat=str(chat_id)
+        data.media_msg=msg_id
+        data.media_type=media_type
+        commit_db()
+
+
+def get_media(name):
+    data=get_list(name)
+
+    if not data or not data.media_msg:
+        return None
+
+    return {
+        "chat":data.media_chat,
+        "msg":data.media_msg,
+        "type":data.media_type
+    }
 
 def add_list(name, jenis="spam", content="", delay=60):
     data = SESSION.query(SpamList).filter_by(name=name).first()
