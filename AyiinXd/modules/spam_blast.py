@@ -1,7 +1,10 @@
-import asyncio,re
-from AyiinXd import CMD_HANDLER as cmd,BOTLOG_CHATID,LOOP,bot
+import asyncio
+import re
+
+from AyiinXd import CMD_HANDLER as cmd,CMD_HELP,BOTLOG_CHATID,bot,LOOP
 from AyiinXd.ayiin import ayiin_cmd
 from AyiinXd.modules.sql_helper import spam_sql
+
 from telethon.errors import FloodWaitError
 
 active_spams={}
